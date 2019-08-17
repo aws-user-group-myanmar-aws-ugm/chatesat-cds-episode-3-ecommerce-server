@@ -15,7 +15,7 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        return Phone::with('details')->get();
+        return Phone::all();
     }
 
     /**
@@ -45,9 +45,15 @@ class PhoneController extends Controller
      * @param  \App\Phone  $phone
      * @return \Illuminate\Http\Response
      */
-    public function show(Phone $phone)
+    public function show($slug)
     {
-        //
+        $phone = Phone::with('details')->where('slug', $slug)->first();
+
+        if ($phone) {
+            return response()->json($phone);
+        } else {
+            return response(null, 404);
+        }
     }
 
     /**
