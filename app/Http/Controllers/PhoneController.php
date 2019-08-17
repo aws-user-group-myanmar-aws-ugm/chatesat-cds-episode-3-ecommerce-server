@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Phone;
 use App\PhoneDetails;
+use App\Http\Resources\PhoneResource;
 use Illuminate\Http\Request;
 
 class PhoneController extends Controller
@@ -15,7 +16,7 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        return Phone::all();
+        return PhoneResource::collection(Phone::all());
     }
 
     /**
