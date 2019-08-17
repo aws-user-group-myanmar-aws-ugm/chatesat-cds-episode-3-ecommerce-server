@@ -4,13 +4,15 @@
 
 ### Requirements
 
-#### Packges
+#### Packages
   - Git
   - Wget
   - Nginx
-  - PHP
-  - PHP Extensions
+  - PHP 7.3
+  - PHP Extensions ( php-pdo, php-fcm )
   - Composer Install
-  - PostgreSQL or MySQL 
-  - Enviornment File ( .env )
-  
+  - PostgreSQL 9.5 +
+  - Enviornment File ( .env.example )
+ 
+
+
